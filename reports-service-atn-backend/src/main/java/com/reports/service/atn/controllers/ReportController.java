@@ -24,9 +24,14 @@ public class ReportController {
     @GetMapping({"/"})
     public List<Report> getAllReports() {return this.reportServices.getAllReports();}
 
-    @GetMapping({"/{date}"})
-    public List<Report> getReport(@PathVariable("date") String date) {
-        return this.reportServices.getReport(date);
+    @GetMapping({"/date/{date}"})
+    public List<Report> getReportByDate(@PathVariable("date") String date) {
+        return this.reportServices.getReportByDate(date);
+    }
+
+    @GetMapping({"/author/{author}"})
+    public List<Report> getReportByAuthor(@PathVariable("author") String author) {
+        return this.reportServices.getReportByAuthor(author);
     }
 
     @DeleteMapping({"/{reportId}"})

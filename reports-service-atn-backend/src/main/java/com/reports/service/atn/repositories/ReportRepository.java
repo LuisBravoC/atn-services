@@ -9,4 +9,6 @@ public interface ReportRepository extends JpaRepository<Report, Long> {
 
     List<Report> findByDate(String date);
 
+    List<Report> findByAuthor(String author);
+
 }

@@ -10,7 +10,9 @@ public interface ReportServices {
 
     List<Report > getAllReports();
 
-    List<Report> getReport (String date);
+    List<Report> getReportByDate(String date);
+
+    List<Report> getReportByAuthor(String author);
 
     void deleteReport (Long ReportId);
 

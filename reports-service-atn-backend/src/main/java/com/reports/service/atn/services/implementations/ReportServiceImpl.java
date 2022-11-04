@@ -17,17 +17,20 @@ public class ReportServiceImpl implements ReportServices {
     public ReportServiceImpl() {
     }
 
-    public Report saveReport(Report report) throws Exception {
-        Report reportLocal = (Report)this.reportRepository.save(report);
-        return reportLocal;
+    public Report saveReport(Report report) {
+        return this.reportRepository.save(report);
     }
 
     public List<Report> getAllReports() {
         return this.reportRepository.findAll();
     }
 
-    public List<Report> getReport(String date) {
+    public List<Report> getReportByDate(String date) {
         return this.reportRepository.findByDate(date);
+    }
+
+    public List<Report> getReportByAuthor(String author) {
+        return this.reportRepository.findByAuthor(author);
     }
 
     public void deleteReport(Long reportId) {
