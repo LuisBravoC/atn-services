@@ -25,7 +25,7 @@ public class ReportController {
     public List<Report> getAllReports() {return this.reportServices.getAllReports();}
 
     @GetMapping({"/{date}"})
-    public Report getReport(@PathVariable("date") String date) {
+    public List<Report> getReport(@PathVariable("date") String date) {
         return this.reportServices.getReport(date);
     }
 

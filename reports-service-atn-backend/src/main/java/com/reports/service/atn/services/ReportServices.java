@@ -10,7 +10,7 @@ public interface ReportServices {
 
     List<Report > getAllReports();
 
-    Report getReport (String date);
+    List<Report> getReport (String date);
 
     void deleteReport (Long ReportId);
 

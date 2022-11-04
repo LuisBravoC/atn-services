@@ -26,7 +26,7 @@ public class ReportServiceImpl implements ReportServices {
         return this.reportRepository.findAll();
     }
 
-    public Report getReport(String date) {
+    public List<Report> getReport(String date) {
         return this.reportRepository.findByDate(date);
     }
 
