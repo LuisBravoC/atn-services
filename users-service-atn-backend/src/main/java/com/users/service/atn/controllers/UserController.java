@@ -22,14 +22,19 @@ public class UserController {
 
     @PostMapping({"/"})
     public User saveUser(@RequestBody User user) throws Exception {
-        Set<UserRole> roles = new HashSet();
+        user.setProfile("default.png");
+        Set<UserRole> userRoles = new HashSet();
+
         Role role = new Role();
         role.setRoleId(2L);
         role.setName("NORMAL");
+
         UserRole userRole = new UserRole();
         userRole.setUser(user);
         userRole.setRole(role);
-        return this.userServices.saveUser(user, roles);
+
+        userRoles.add(userRole);
+        return this.userServices.saveUser(user, userRoles);
     }
 
     @GetMapping({"/"})
