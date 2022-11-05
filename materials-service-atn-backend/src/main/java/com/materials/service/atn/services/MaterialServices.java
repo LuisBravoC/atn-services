@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface MaterialServices {
 
-    Material saveMaterial(Material user) throws Exception;
+    Material saveMaterial(Material material) throws Exception;
 
     List<Material> getAllMaterial();
 
