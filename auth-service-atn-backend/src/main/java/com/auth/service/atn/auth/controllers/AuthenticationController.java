@@ -1,17 +1,16 @@
-package com.users.service.atn.controllers;
+package com.auth.service.atn.auth.controllers;
 
-import com.users.service.atn.entities.JwtRequest;
-import com.users.service.atn.entities.JwtResponse;
-import com.users.service.atn.entities.User;
-import com.users.service.atn.security.JwtUtils;
-import com.users.service.atn.services.implementations.UserDetailsServiceImpl;
+import com.auth.service.atn.auth.entities.JwtRequest;
+import com.auth.service.atn.auth.entities.JwtResponse;
+import com.auth.service.atn.auth.entities.User;
+import com.auth.service.atn.auth.security.JwtUtils;
+import com.auth.service.atn.auth.services.implementations.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;

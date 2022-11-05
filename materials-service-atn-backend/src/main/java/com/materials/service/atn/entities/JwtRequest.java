@@ -1,4 +1,4 @@
-package com.users.service.atn.entities;
+package com.materials.service.atn.entities;
 
 public class JwtRequest {
 

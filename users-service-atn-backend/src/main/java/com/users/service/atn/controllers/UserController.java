@@ -20,7 +20,7 @@ public class UserController {
     public UserController() {
     }
 
-    @PostMapping({"/"})
+    @PostMapping({"/new"})
     public User saveUser(@RequestBody User user) throws Exception {
         user.setProfile("default.png");
         Set<UserRole> userRoles = new HashSet();
@@ -47,7 +47,7 @@ public class UserController {
         return this.userServices.getUser(username);
     }
 
-    @DeleteMapping({"/{userId}"})
+    @DeleteMapping({"/delete/{userId}"})
     public void deleteUser(@PathVariable("userId") Long userId) {
         this.userServices.deleteUser(userId);
     }

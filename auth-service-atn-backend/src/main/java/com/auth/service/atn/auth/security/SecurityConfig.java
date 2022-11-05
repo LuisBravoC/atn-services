@@ -1,6 +1,6 @@
-package com.users.service.atn.security;
+package com.auth.service.atn.auth.security;
 
-import com.users.service.atn.services.implementations.UserDetailsServiceImpl;
+import com.auth.service.atn.auth.services.implementations.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
