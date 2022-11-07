@@ -1,0 +1,33 @@
+<div class="bootstrap-wrapper center">
+    <div class="container">
+        <div class="row mt20">
+            <div class="col-md-6 offset-md-3">
+                <mat-card>
+                    <div class="container text-center" style="margin-top : 50px;">
+                        <img src="../../../assets/atn-logo.png" width="300">
+                    </div>
+
+                    <h1 class="text-center text-primary-color" style="margin: 40px;">Inicio de sesión</h1>
+                    <form (ngSubmit)="formSubmit()">
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Nombre de usuario</mat-label>
+                            <input [(ngModel)]="loginData.username" name="username" required matInput
+                                placeholder="Digite su nombre de usuario">
+                        </mat-form-field>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Contraseña</mat-label>
+                            <input [(ngModel)]="loginData.password" name="password" required type="password" matInput
+                                placeholder="Digite su contraseña">
+                        </mat-form-field>
+
+                        <br><br>
+
+                        <div class="container text-center" style="margin-bottom: 30px;">
+                            <button type="submit" mat-raised-button color="primary">Iniciar sesión</button>
+                        </div>
+                    </form>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

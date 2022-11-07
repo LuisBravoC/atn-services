@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping({"/materials"})
+@CrossOrigin("*")
 public class MaterialController {
     @Autowired
     private MaterialServices materialServices;

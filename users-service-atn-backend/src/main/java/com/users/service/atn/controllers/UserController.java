@@ -13,6 +13,7 @@ import java.util.Set;
 
 @RestController
 @RequestMapping({"/users"})
+@CrossOrigin("*")
 public class UserController {
     @Autowired
     private UserServices userServices;
@@ -20,7 +21,7 @@ public class UserController {
     public UserController() {
     }
 
-    @PostMapping({"/new"})
+    @PostMapping({"/"})
     public User saveUser(@RequestBody User user) throws Exception {
         user.setProfile("default.png");
         Set<UserRole> userRoles = new HashSet();

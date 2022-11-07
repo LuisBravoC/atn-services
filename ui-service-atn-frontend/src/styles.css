@@ -1,1 +1,147 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: #f5f5f5;
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.body2{
+    background-color: #FF3CAC;
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+        
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.text-center{
+    text-align: center;
+  }
+  
+  .full-width{
+    width: 100%;
+  }
+  
+  .ml20{
+    margin-left: 20px !important;
+  }
+  
+  .mr20{
+    margin-right: 20px !important;
+  }
+  
+  .mt20{
+    margin-top: 20px !important;
+  }
+  
+  .mb20{
+    margin-bottom: 20px !important;
+  }
+  
+  .ml10{
+    margin-left: 10px !important;
+  }
+  
+  .mr10{
+    margin-right: 10px !important;
+  }
+  
+  .mt10{
+    margin-top: 10px !important;
+  }
+  
+  .mb10{
+    margin-bottom: 10px !important;
+  }
+  
+  .ml70{
+    margin-left: 70px !important;
+  }
+
+.navbar-color-dark{
+    background-color: rgb(34, 34, 34);
+}
+
+.center {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.corners1 {
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e2e2e2;
+    border-style: dashed 4px #000;
+}
+
+.corners2 {
+    border-radius: 10px;
+    background-image: repeating-linear-gradient(0deg, #e8e8e8, #e8e8e8 10px, transparent 10px, transparent 20px, #e8e8e8 20px), repeating-linear-gradient(90deg, #e8e8e8, #e8e8e8 10px, transparent 10px, transparent 20px, #e8e8e8 20px), repeating-linear-gradient(180deg, #e8e8e8, #e8e8e8 10px, transparent 10px, transparent 20px, #e8e8e8 20px), repeating-linear-gradient(270deg, #e8e8e8, #e8e8e8 10px, transparent 10px, transparent 20px, #e8e8e8 20px);
+    background-size: 2px 100%, 100% 2px, 2px 100%, 100% 2px;
+    background-position: 0 0, 0 0, 100% 0, 0 100%;
+    background-repeat: no-repeat;
+}
+
+.corners-animated {
+    background-color: #ffffff;
+    border-radius: 10px;
+    background-image: repeating-linear-gradient(0deg, #8f8f8f, #8f8f8f 10px, transparent 10px, transparent 25px, #8f8f8f 25px), repeating-linear-gradient(90deg, #8f8f8f, #8f8f8f 10px, transparent 10px, transparent 25px, #8f8f8f 25px), repeating-linear-gradient(180deg, #8f8f8f, #8f8f8f 10px, transparent 10px, transparent 25px, #8f8f8f 25px), repeating-linear-gradient(270deg, #8f8f8f, #8f8f8f 10px, transparent 10px, transparent 25px, #8f8f8f 25px);
+    background-size: 2px calc(100% + 25px), calc(100% + 25px) 2px, 2px calc(100% + 25px), calc(100% + 25px) 2px;
+    background-position: 0 0, 0 0, 100% 0, 0 100%;
+    background-repeat: no-repeat;
+    animation: borderAnimation 1s infinite linear;
+}
+
+@keyframes borderAnimation {
+    from {
+        background-position: 0 0, -25px 0, 100% -25px, 0 100%;
+    }
+
+    to {
+        background-position: 0 -25px, 0 0, 100% 0, -25px 100%;
+    }
+}
+
+.margin-inside {
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.mat-success-snack {
+    background-color: green;
+    color: #fff;
+}
+
+/* Color de textos */
+
+.text-primary-color {
+    color: #223953;
+}
+
+/* Botones */
+
+/* Color de botones */
+
+.mat-success {
+    border-radius: 20px;
+    background-color: green;
+    color: #fff;
+    width: 50%;
+}
+
+.error-snackbar {
+    background: #c03329;
+  }
