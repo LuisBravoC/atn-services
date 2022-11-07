@@ -4,11 +4,14 @@
             <div class="col-md-6 offset-md-3">
                 <mat-card>
                     <div class="container text-center" style="margin-top : 50px;">
-                        <img src="../../../assets/atn-logo.png" width="300">
+                        <img class="hidden-mobile" src="../../../assets/atn-logo.png">
+                    </div>
+                    <div class="container text-center" style="margin-top : 50px;">
+                        <img class="show-mobile" src="../../../assets/atn-logo-min.png">
                     </div>
 
                     <h1 class="text-center text-primary-color" style="margin: 40px;">Inicio de sesión</h1>
-                    <form (ngSubmit)="formSubmit()">
+                    <form (ngSubmit)="formSubmit(loginForm)" #loginForm="ngForm">
                         <mat-form-field class="full-width" appearance="outline">
                             <mat-label>Nombre de usuario</mat-label>
                             <input [(ngModel)]="loginData.username" name="username" required matInput

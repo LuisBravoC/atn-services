@@ -30,9 +30,9 @@ export class SignupComponent implements OnInit {
     console.log(this.user);
     if(this.user.username == '' || this.user.username == null){
       this.snack.open('El nombre de usuario es requerido', '',{
-        duration : 3000,
-        verticalPosition : 'bottom',
-        horizontalPosition : 'center',
+        duration: 3000,
+        verticalPosition: 'bottom',
+        horizontalPosition: 'center',
         panelClass: ['mat-toolbar', 'mat-warn']
       });
       //Swal.fire('Error','Hubo un error','error');
@@ -43,17 +43,17 @@ export class SignupComponent implements OnInit {
       (data) => {
         console.log(data);
         this.snack.open('Usuario guardado exitosamente', '',{
-          duration : 5000,
-          verticalPosition : 'bottom',
-          horizontalPosition : 'right',
+          duration: 5000,
+          verticalPosition: 'bottom',
+          horizontalPosition: 'right',
           panelClass: ['mat-toolbar', 'mat-success-snack']
         });
       },(error) => {
         console.log(error);
         this.snack.open('Ha ocurrido un error en el sistema', '',{
-          duration : 3000,
-          verticalPosition : 'top',
-          horizontalPosition : 'center',
+          duration: 3000,
+          verticalPosition: 'top',
+          horizontalPosition: 'center',
           panelClass: ['mat-toolbar', 'mat-warn']
         });
       }
