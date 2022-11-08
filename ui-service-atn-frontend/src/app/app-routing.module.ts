@@ -1,3 +1,4 @@
+import { ReportComponent } from './pages/report/report.component';
 import { UnauthorizedComponent } from './pages/unauthorized/unauthorized/unauthorized.component';
 import { PageNotFoundComponent } from './pages/pagenotfound/page-not-found/page-not-found.component';
 import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
@@ -25,7 +26,8 @@ const routes: Routes = [
   {
     path: 'signup',
     component: SignupComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    canActivate:[AdminGuard]
   },
   {
     path: 'login',
@@ -45,6 +47,10 @@ const routes: Routes = [
     component: MaterialComponent,
     pathMatch: 'full',
     canActivate:[AdminGuard]
+  }, {
+    path: 'report',
+    component: ReportComponent,
+    pathMatch: 'full',
   },
 
   // 404

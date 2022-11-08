@@ -16,9 +16,18 @@ export class LoginComponent implements OnInit {
     "password": '',
   }
 
-  constructor(private snack: MatSnackBar, private loginService: LoginService, private router:Router) { }
+  constructor(private snack: MatSnackBar, private loginService: LoginService, private router: Router) { }
 
   ngOnInit(): void {
+
+    if (this.loginService.isAdmin()) {
+      this.router.navigate(['admin']);
+    }
+
+    if(this.loginService.isNormal()){
+      this.router.navigate(['dashboard']);
+    }
+
   }
 
   formSubmit(loginForm: NgForm) {
@@ -45,12 +54,11 @@ export class LoginComponent implements OnInit {
     this.loginService.generateToken(this.loginData).subscribe(
       (data: any) => {
         console.log(data);
-
         this.loginService.loginUser(data.token);
         this.loginService.getCurrentUser().subscribe((user: any) => {
+          this.loginService.loginUser(data.token);
           this.loginService.setUser(user);
           console.log(user);
-
           if (this.loginService.getUserRole() == "ADMIN") {
             // Dashboard admin
             this.router.navigate(['admin']);

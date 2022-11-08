@@ -1,0 +1,80 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-md-6 offset-md-3 corners-animated" style="width: 100%;">
+                <div class="margin-inside">
+                    <div class="container text-center" style="margin-top : 50px;">
+                        <img src="../../../assets/add-material.png" width="100" height="100">
+                    </div>
+
+                    <h1 class="text-center text-primary-color" style="margin-bottom: 40px;">Nuevo reporte</h1>
+
+
+                    <form (ngSubmit)="formSubmit(signupForm)" #signupForm="ngForm">
+
+                        <div class="row">
+                            <div class="col-sm">
+                               
+                                <mat-form-field class="full-width" appearance="fill">
+                                    <mat-label>Materiales</mat-label>
+                                    <mat-select [(ngModel)]="report.material" name="material">
+                                      <mat-option *ngFor="let materials of materialList" [value]="materials.name">
+                                        {{materials.name}}
+                                      </mat-option>
+                                    </mat-select>
+                                  </mat-form-field>
+                            </div>
+                            <div class="col-sm">
+                                <mat-form-field class="full-width" appearance="outline">
+                                    <mat-label>Calibre</mat-label>
+                                    <input required [(ngModel)]="report.caliber" name="caliber" matInput
+                                        placeholder="Escriba el calibre">
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm">
+                                <mat-form-field class="full-width" appearance="outline">
+                                    <mat-label>Altura</mat-label>
+                                    <input required [(ngModel)]="report.height" name="height" matInput
+                                        placeholder="Escriba la altura">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-sm">
+                                <mat-form-field class="full-width" appearance="outline">
+                                    <mat-label>Rombos</mat-label>
+                                    <input required [(ngModel)]="report.rhomb" name="rhomb" matInput
+                                        placeholder="Escriba los rombos">
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm">
+                                <mat-form-field class="full-width" appearance="outline">
+                                    <mat-label>Metros</mat-label>
+                                    <input required [(ngModel)]="report.meters" name="meters" matInput
+                                        placeholder="Escriba los metros">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-sm">
+                                <mat-form-field class="full-width" appearance="outline">
+                                    <mat-label>Cantidad</mat-label>
+                                    <input required [(ngModel)]="report.quantity" name="quantity" matInput
+                                        placeholder="Escriba la cantidad">
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="container text-center" style="margin-top: 20px;">
+                            <button ttype="submit" mat-raised-button color="success">Agregar</button>
+                        </div>
+                    </form>
+
+                    <br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

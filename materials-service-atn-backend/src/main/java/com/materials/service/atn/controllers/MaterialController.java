@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping({"/materials"})
+@RequestMapping({"/materials/"})
 @CrossOrigin("*")
 public class MaterialController {
     @Autowired

@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping({"/reports"})
+@RequestMapping({"/reports/"})
+@CrossOrigin("*")
 public class ReportController {
     @Autowired
     private ReportServices reportServices;

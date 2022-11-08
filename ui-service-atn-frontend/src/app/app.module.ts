@@ -16,6 +16,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatSelectModule} from '@angular/material/select';
 
 
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -29,6 +30,7 @@ import { AdminDashboardComponent } from './pages/admin/admin-dashboard/admin-das
 import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
 import { PageNotFoundComponent } from './pages/pagenotfound/page-not-found/page-not-found.component';
 import { UnauthorizedComponent } from './pages/unauthorized/unauthorized/unauthorized.component';
+import { ReportComponent } from './pages/report/report.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,7 @@ import { UnauthorizedComponent } from './pages/unauthorized/unauthorized/unautho
     UserDashboardComponent,
     PageNotFoundComponent,
     UnauthorizedComponent,
+    ReportComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,7 +60,8 @@ import { UnauthorizedComponent } from './pages/unauthorized/unauthorized/unautho
     MatCardModule,
     MatToolbarModule,
     MatIconModule,
-    MatGridListModule
+    MatGridListModule,
+    MatSelectModule
   ],
   providers: [authInterceptorProvider],
   bootstrap: [AppComponent]
