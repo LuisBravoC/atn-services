@@ -14,10 +14,15 @@
         Registrar
     </a>
 
+    <button *ngIf="isLoggedIn && user" mat-button style="color: #fff;" class="example-icon favorite-icon"
+        aria-label="Example icon-button with heart icon">
+        {{ user.username }}
+    </button>
+
     <a *ngIf="login.isAdmin()" [routerLink]="'/admin'" class="mr10 ml10 btn btn-success">
         Admin panel
     </a>
-    <a *ngIf="login.isLoggedIn()" (click) = "logout()" class="mr10 ml10 btn btn-light">
+    <a *ngIf="login.isLoggedIn()" (click)="logout()" class="mr10 ml10 btn btn-light">
         Cerrar sesión
     </a>
 

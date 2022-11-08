@@ -19,7 +19,7 @@ export class NavbarComponent implements OnInit {
     this.login.loginStatusSubjec.asObservable().subscribe(
       data => {
         this.isLoggedIn = this.login.isLoggedIn();
-        this.us er = this.login.getUser();
+        this.user = this.login.getUser();
       }
     )
   }

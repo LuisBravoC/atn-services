@@ -1,11 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 import authlUrl from './helper';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
+
+  public loginStatusSubjec = new Subject<boolean>();
 
   constructor(private httpClient: HttpClient) { }
 
