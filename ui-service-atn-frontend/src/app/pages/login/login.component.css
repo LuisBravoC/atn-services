@@ -1,5 +1,5 @@
 img {
-    max-width:300px;
+    max-width: 300px;
     width: auto;
 }
 
@@ -12,5 +12,11 @@ img {
 @media (min-width: 371px) {
     .show-mobile {
         display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    mat-card {
+        min-width: 17rem;
     }
 }

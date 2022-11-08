@@ -2,13 +2,23 @@
     <a [routerLink]="'/'" mat-icon-button class="example-icon" arial-label="Example icon-button with menu icon">
         <img src="../../../assets/atn-logo-small.png" width="100%">
     </a>
-    <span class = "text-light hidden-mobile" style="margin-left: 10px;">Aceros y trefilados del noroeste</span>
+    <span class="text-light hidden-mobile" style="margin-left: 10px;">Aceros y trefilados del noroeste</span>
+    <span *ngIf="login.isAdmin()" class="text-light hidden-mobile" style="margin-left: 10px;"> | Admin</span>
+    <span *ngIf="login.isNormal()" class="text-light hidden-mobile" style="margin-left: 10px;"> | Empleado</span>
     <span class="example-spacer"></span>
-    <a [routerLink]="'/login'" class="mr10 ml10 btn btn-light">
+
+    <a *ngIf="!login.isLoggedIn()" [routerLink]="'/login'" class="mr10 ml10 btn btn-light">
         Iniciar sesión
     </a>
-    <a [routerLink]="'/signup'" class="mr10 ml10 btn btn-success">
+    <a *ngIf="!login.isLoggedIn()" [routerLink]="'/signup'" class="mr10 ml10 btn btn-success">
         Registrar
+    </a>
+
+    <a *ngIf="login.isAdmin()" [routerLink]="'/admin'" class="mr10 ml10 btn btn-success">
+        Admin panel
+    </a>
+    <a *ngIf="login.isLoggedIn()" (click) = "logout()" class="mr10 ml10 btn btn-light">
+        Cerrar sesión
     </a>
 
 </mat-toolbar>

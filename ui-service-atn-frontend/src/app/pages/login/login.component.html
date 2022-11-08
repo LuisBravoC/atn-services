@@ -1,18 +1,20 @@
 <div class="bootstrap-wrapper center">
     <div class="container">
-        <div class="row mt20">
-            <div class="col-md-6 offset-md-3">
+        <div class="mt20">
+            <div class="col-md-6 offset-md-3 text-center">
+                <div class="card-header">
+                    <h1 class="text-center">Inicio de sesión</h1>
+                </div>
                 <mat-card>
-                    <div class="container text-center" style="margin-top : 50px;">
+                    <div class="container text-center" style="margin-top : 30px;">
                         <img class="hidden-mobile" src="../../../assets/atn-logo.png">
                     </div>
-                    <div class="container text-center" style="margin-top : 50px;">
+                    <div class="container text-center" style="margin-top : 30px;">
                         <img class="show-mobile" src="../../../assets/atn-logo-min.png">
                     </div>
-
-                    <h1 class="text-center text-primary-color" style="margin: 40px;">Inicio de sesión</h1>
+                    
                     <form (ngSubmit)="formSubmit(loginForm)" #loginForm="ngForm">
-                        <mat-form-field class="full-width" appearance="outline">
+                        <mat-form-field class="full-width" appearance="outline" style="margin-top : 30px;">
                             <mat-label>Nombre de usuario</mat-label>
                             <input [(ngModel)]="loginData.username" name="username" required matInput
                                 placeholder="Digite su nombre de usuario">

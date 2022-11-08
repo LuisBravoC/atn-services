@@ -39,7 +39,7 @@ export class SignupComponent implements OnInit {
       return;
     }
 
-    this.userService.añadirUsuario(this.user).subscribe(
+    this.userService.addUser(this.user).subscribe(
       (data) => {
         console.log(data);
         this.snack.open('Usuario guardado exitosamente', '',{

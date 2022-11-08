@@ -9,8 +9,9 @@ export class MaterialService {
 
   constructor(private httpClient: HttpClient) { }
 
-    public añadirUsuario(material:any){
-      return this.httpClient.post(`${materialUrl}/materials/`,material);
-    }
+  // Añadir material con un metodo http POST
+  public addMaterial(material: any) {
+    return this.httpClient.post(`${materialUrl}/materials/`, material);
+  }
 
 }

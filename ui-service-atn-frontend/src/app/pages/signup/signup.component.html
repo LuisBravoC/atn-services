@@ -1,13 +1,16 @@
 <div class="bootstrap-wrapper">
   <div class="container center">
     <div class="row" style="margin-top: 20px;">
-      <div class="col-md-6 offset-md-3 corners-animated">
+      <div class="corners-animated" style="max-width: 500px;">
+        <div class="card-header">
+          <h1 class="text-center">Agregar nuevo usuario</h1>
+        </div>
         <div class="margin-inside">
           <div class="container text-center" style="margin-top : 50px;">
             <img src="../../../assets/add-user.png" width="100" height="100">
           </div>
 
-          <h1 class="text-center text-primary-color" style="margin-bottom: 40px;">Agregar nuevo usuario</h1>
+          <h1 class="text-center text-primary-color" style="margin-bottom: 40px;"></h1>
 
 
           <form (ngSubmit)="formSubmit(signupForm)" #signupForm="ngForm">

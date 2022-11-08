@@ -1,0 +1,22 @@
+img {
+    max-width: 300px;
+    width: auto;
+}
+
+@media (max-width: 370px) {
+    .hidden-mobile {
+        display: none;
+    }
+}
+
+@media (min-width: 371px) {
+    .show-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    mat-card {
+        min-width: 17rem;
+    }
+}

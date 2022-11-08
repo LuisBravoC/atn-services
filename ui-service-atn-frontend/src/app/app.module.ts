@@ -15,6 +15,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -23,6 +24,11 @@ import { LoginComponent } from './pages/login/login.component';
 import { MaterialComponent } from './pages/materials/material/material.component';
 import { CaliberComponent } from './pages/materials/caliber/caliber.component';
 import { HomeComponent } from './pages/home/home.component';
+import { authInterceptorProvider } from './services/login/auth.interceptor';
+import { AdminDashboardComponent } from './pages/admin/admin-dashboard/admin-dashboard.component';
+import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
+import { PageNotFoundComponent } from './pages/pagenotfound/page-not-found/page-not-found.component';
+import { UnauthorizedComponent } from './pages/unauthorized/unauthorized/unauthorized.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +39,10 @@ import { HomeComponent } from './pages/home/home.component';
     MaterialComponent,
     CaliberComponent,
     HomeComponent,
+    AdminDashboardComponent,
+    UserDashboardComponent,
+    PageNotFoundComponent,
+    UnauthorizedComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,9 +56,10 @@ import { HomeComponent } from './pages/home/home.component';
     MatSnackBarModule,
     MatCardModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatGridListModule
   ],
-  providers: [],
+  providers: [authInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

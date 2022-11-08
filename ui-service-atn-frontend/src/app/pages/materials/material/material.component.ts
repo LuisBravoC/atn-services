@@ -29,7 +29,7 @@ export class MaterialComponent implements OnInit {
       return;
     }
 
-    this.materialService.añadirUsuario(this.material).subscribe(
+    this.materialService.addMaterial(this.material).subscribe(
       (data) => {
         console.log(data);
         alert('Usuario guardado exitosamente');
