@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CaliberRepository extends JpaRepository<Caliber, Long> {
 
-    Caliber findByCaliber(String name);
+    Caliber findByCaliber(String caliber);
 
 }

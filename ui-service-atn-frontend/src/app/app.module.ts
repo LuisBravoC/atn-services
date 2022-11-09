@@ -17,6 +17,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSelectModule} from '@angular/material/select';
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -32,6 +33,7 @@ import { PageNotFoundComponent } from './pages/pagenotfound/page-not-found/page-
 import { UnauthorizedComponent } from './pages/unauthorized/unauthorized/unauthorized.component';
 import { ReportComponent } from './pages/report/report.component';
 import { HeightComponent } from './pages/materials/height/height.component';
+import { RhombusComponent } from './pages/materials/rhombus/rhombus.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +50,7 @@ import { HeightComponent } from './pages/materials/height/height.component';
     UnauthorizedComponent,
     ReportComponent,
     HeightComponent,
+    RhombusComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,7 +66,8 @@ import { HeightComponent } from './pages/materials/height/height.component';
     MatToolbarModule,
     MatIconModule,
     MatGridListModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTabsModule
   ],
   providers: [authInterceptorProvider],
   bootstrap: [AppComponent]

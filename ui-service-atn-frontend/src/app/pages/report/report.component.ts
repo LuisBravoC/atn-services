@@ -7,6 +7,7 @@ import { LoginService } from 'src/app/services/login/login.service';
 import { Router } from '@angular/router';
 import { Caliber, CaliberService } from 'src/app/services/materials/caliber/caliber.service';
 import { Height, HeightsService } from 'src/app/services/materials/heights/heights.service';
+import { Rhombus, RhombusService } from 'src/app/services/materials/rhombus/rhombus.service';
 
 @Component({
   selector: 'app-report',
@@ -19,25 +20,27 @@ export class ReportComponent implements OnInit {
     material: '',
     caliber: '',
     height: '',
-    rhomb: '',
+    rhombus: '',
     meters: '',
     quantity: '',
     author: '',
     date: ''
   }
 
-  
+
   materialList: Material[];
   caliberList: Caliber[];
   heightList: Height[];
+  rhombusList: Rhombus[];
   user: any = null;
 
-  constructor(private snack: MatSnackBar, private reportService: ReportService, private loginService: LoginService, 
+  constructor(private snack: MatSnackBar, private reportService: ReportService, private loginService: LoginService,
     private materialServices:MaterialService, private caliberServices:CaliberService, private heightService:HeightsService,
-    private router: Router) {
+    private rhombusServices:RhombusService, private router: Router) {
     this.materialList = [];
     this.caliberList = [];
     this.heightList = [];
+    this.rhombusList = [];
   }
 
   ngOnInit(): void {
@@ -45,7 +48,7 @@ export class ReportComponent implements OnInit {
     if (!this.loginService.isLoggedIn()) {
       this.router.navigate(['']);
     }
-    
+
     this.materialServices.getAllMaterials$().subscribe(materials => {
       this.materialList = materials;
       console.log(this.materialList);
@@ -61,11 +64,16 @@ export class ReportComponent implements OnInit {
       console.log(this.heightList);
     });
 
+    this.rhombusServices.getAllRhombus$().subscribe(rhombus => {
+      this.rhombusList = rhombus;
+      console.log(this.rhombusList);
+    });
+
     if(this.loginService.isLoggedIn()){
       this.user = this.loginService.getUser();
       this.report.author = this.user.name + ' ' + this.user.lastname;
     }
-    
+
     var today = new Date();
     var date;
     var dd = String(today.getDate()).padStart(2, '0');
@@ -112,7 +120,7 @@ export class ReportComponent implements OnInit {
       return;
     }
 
-    if (this.report.rhomb == '' || this.report.rhomb == null) {
+    if (this.report.rhombus == '' || this.report.rhombus == null) {
       this.snack.open('Los rombos son requeridos', '', {
         duration: 3000,
         verticalPosition: 'bottom',

@@ -16,7 +16,7 @@ public class Report {
     private String material;
     private String caliber;
     private String height;
-    private String rhomb;
+    private String rhombus;
     private String meters;
     private String quantity;
     private String author;
@@ -57,12 +57,12 @@ public class Report {
         this.height = height;
     }
 
-    public String getRhomb() {
-        return rhomb;
+    public String getRhombus() {
+        return rhombus;
     }
 
-    public void setRhomb(String rhomb) {
-        this.rhomb = rhomb;
+    public void setRhombus(String rhombus) {
+        this.rhombus = rhombus;
     }
 
     public String getMeters() {

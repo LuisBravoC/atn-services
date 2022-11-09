@@ -32,8 +32,8 @@ public class CaliberServiceImpl implements CaliberServices {
         return this.caliberRepository.findAll();
     }
 
-    public Caliber getCaliber(String name) {
-        return this.caliberRepository.findByCaliber(name);
+    public Caliber getCaliber(String caliber) {
+        return this.caliberRepository.findByCaliber(caliber);
     }
 
     public void deleteCaliber(Long caliberId) {

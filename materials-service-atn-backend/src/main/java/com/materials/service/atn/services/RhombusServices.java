@@ -1,18 +1,18 @@
 package com.materials.service.atn.services;
 
 
-import com.materials.service.atn.entities.Rhomb;
+import com.materials.service.atn.entities.Rhombus;
 
 import java.util.List;
 
-public interface RhombServices {
+public interface RhombusServices {
 
-    Rhomb saveRhomb(Rhomb rhomb) throws Exception;
+    Rhombus saveRhombus(Rhombus rhombus) throws Exception;
 
-    List<Rhomb> getAllRhomb();
+    List<Rhombus> getAllRhombus();
 
-    Rhomb getRhomb(String rhomb);
+    Rhombus getRhombus(String rhombus);
 
-    void deleteRhomb(Long caliberId);
+    void deleteRhombus(Long rhombusId);
 
 }

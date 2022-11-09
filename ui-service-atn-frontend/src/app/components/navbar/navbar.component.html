@@ -1,4 +1,4 @@
-<mat-toolbar class="navbar-color-dark">
+<mat-toolbar class="navbar-color-dark always-top">
     <a [routerLink]="'/'" mat-icon-button class="example-icon" arial-label="Example icon-button with menu icon">
         <img src="../../../assets/atn-logo-small.png" width="100%">
     </a>
@@ -7,14 +7,15 @@
     <span *ngIf="login.isNormal()" class="text-light hidden-mobile" style="margin-left: 10px;"> | Empleado</span>
     <span class="example-spacer"></span>
 
-    <a *ngIf="!login.isLoggedIn()" [routerLink]="'/login'" class="mr10 ml10 btn btn-light">
-        Iniciar sesión
-    </a>
 
     <button *ngIf="isLoggedIn && user" mat-button style="color: #fff;" class="example-icon favorite-icon"
         aria-label="Example icon-button with heart icon">
         Hola, {{ user.username }}!
     </button>
+
+    <a *ngIf="!login.isLoggedIn()" [routerLink]="'/login'" class="mr10 ml10 btn btn-light">
+        Iniciar sesión
+    </a>
 
     <a *ngIf="login.isAdmin()" [routerLink]="'/admin'" class="mr10 ml10 btn btn-success">
         Admin panel

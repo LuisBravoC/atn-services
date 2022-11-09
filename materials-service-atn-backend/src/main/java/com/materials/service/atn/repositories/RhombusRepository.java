@@ -1,10 +1,10 @@
 package com.materials.service.atn.repositories;
 
-import com.materials.service.atn.entities.Rhomb;
+import com.materials.service.atn.entities.Rhombus;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface RhombRepository extends JpaRepository<Rhomb, Long> {
+public interface RhombusRepository extends JpaRepository<Rhombus, Long> {
 
-    Rhomb findByRhomb(String rhomb);
+    Rhombus findByRhombus(String rhombus);
 
 }

@@ -1,3 +1,4 @@
+import { RhombusComponent } from './pages/materials/rhombus/rhombus.component';
 import { ReportComponent } from './pages/report/report.component';
 import { UnauthorizedComponent } from './pages/unauthorized/unauthorized/unauthorized.component';
 import { PageNotFoundComponent } from './pages/pagenotfound/page-not-found/page-not-found.component';
@@ -57,6 +58,11 @@ const routes: Routes = [
   },{
     path: 'heights',
     component: HeightComponent,
+    pathMatch: 'full',
+    canActivate:[AdminGuard]
+  },{
+    path: 'rhombus',
+    component: RhombusComponent,
     pathMatch: 'full',
     canActivate:[AdminGuard]
   }, {

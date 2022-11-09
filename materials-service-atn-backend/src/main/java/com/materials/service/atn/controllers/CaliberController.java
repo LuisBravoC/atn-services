@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping({"/calibers"})
+@RequestMapping({"/calibers/"})
 @CrossOrigin("*")
 public class CaliberController {
     @Autowired
@@ -28,8 +28,8 @@ public class CaliberController {
     }
 
     @GetMapping({"/{name}"})
-    public Caliber getCaliber(@PathVariable("name") String name) {
-        return this.caliberServices.getCaliber(name);
+    public Caliber getCaliber(@PathVariable("name") String caliber) {
+        return this.caliberServices.getCaliber(caliber);
     }
 
     @DeleteMapping({"/{caliberId}"})

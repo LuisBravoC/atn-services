@@ -1,5 +1,5 @@
 <div class="bootstrap-wrapper">
-    <div class="container center-absolute">
+    <div class="container">
         <div class="row" style="margin-top: 20px;">
             <div class="col-md-6 offset-md-3 corners-animated" style="width: 100%;">
                 <div class="margin-inside">
@@ -49,8 +49,11 @@
                             <div class="col-sm">
                                 <mat-form-field class="full-width" appearance="outline">
                                     <mat-label>Rombos</mat-label>
-                                    <input required [(ngModel)]="report.rhomb" name="rhomb" matInput
-                                        placeholder="Escriba los rombos">
+                                    <mat-select required [(ngModel)]="report.rhombus" name="rhombus">
+                                        <mat-option *ngFor="let rhombus of rhombusList" [value]="rhombus.rhombus">
+                                            {{rhombus.rhombus}}
+                                        </mat-option>
+                                    </mat-select>
                                 </mat-form-field>
                             </div>
                         </div>

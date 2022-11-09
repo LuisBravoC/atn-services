@@ -4,9 +4,9 @@ import javax.persistence.*;
 
 @Entity
 @Table(
-        name = "rhombs"
+        name = "rhombus"
 )
-public class Rhomb {
+public class Rhombus {
 
     @Id
     @GeneratedValue(
@@ -14,11 +14,11 @@ public class Rhomb {
     )
     private Long id;
 
-    private String rhomb;
+    private String rhombus;
 
     private boolean enabled = true;
 
-    public Rhomb() {
+    public Rhombus() {
     }
 
     public Long getId() {
@@ -29,12 +29,12 @@ public class Rhomb {
         this.id = id;
     }
 
-    public String getRhomb() {
-        return rhomb;
+    public String getRhombus() {
+        return rhombus;
     }
 
-    public void setRhomb(String rhomb) {
-        this.rhomb = rhomb;
+    public void setRhombus(String rhombus) {
+        this.rhombus = rhombus;
     }
 
     public boolean isEnabled() {

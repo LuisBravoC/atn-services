@@ -1,0 +1,29 @@
+<div class="bootstrap-wrapper">
+    <div class="container center-absolute">
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-md-6 offset-md-3 corners-animated">
+                <div class="margin-inside">
+                    <div class="container text-center" style="margin-top : 50px;">
+                        <img src="../../../assets/add-height.png" width="100" height="100">
+                    </div>
+
+                    <h1 class="text-center text-primary-color" style="margin-bottom: 40px;">Agregar nueva medida de rombos</h1>
+
+                    <form (ngSubmit)="formSubmit(signupForm)" #signupForm="ngForm">
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Rombos</mat-label>
+                            <input required [(ngModel)]="rhombus.rhombus" name="height" matInput
+                                placeholder="Escriba la medida de los rombos">
+                        </mat-form-field>
+
+                        <div class="container text-center" style="margin-top: 20px;">
+                            <button ttype="submit" mat-raised-button color="success">Agregar</button>
+                        </div>
+                    </form>
+
+                    <br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
