@@ -31,6 +31,7 @@ import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboa
 import { PageNotFoundComponent } from './pages/pagenotfound/page-not-found/page-not-found.component';
 import { UnauthorizedComponent } from './pages/unauthorized/unauthorized/unauthorized.component';
 import { ReportComponent } from './pages/report/report.component';
+import { HeightComponent } from './pages/materials/height/height.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { ReportComponent } from './pages/report/report.component';
     PageNotFoundComponent,
     UnauthorizedComponent,
     ReportComponent,
+    HeightComponent,
   ],
   imports: [
     BrowserModule,

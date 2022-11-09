@@ -1,10 +1,12 @@
-import { Material, MaterialService } from './../../services/material/material.service';
+import { Material, MaterialService } from 'src/app/services/materials/material/material.service';
 import { ReportService } from './../../services/report/report.service';
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { NgForm } from '@angular/forms';
 import { LoginService } from 'src/app/services/login/login.service';
 import { Router } from '@angular/router';
+import { Caliber, CaliberService } from 'src/app/services/materials/caliber/caliber.service';
+import { Height, HeightsService } from 'src/app/services/materials/heights/heights.service';
 
 @Component({
   selector: 'app-report',
@@ -26,10 +28,16 @@ export class ReportComponent implements OnInit {
 
   
   materialList: Material[];
+  caliberList: Caliber[];
+  heightList: Height[];
   user: any = null;
 
-  constructor(private snack: MatSnackBar, private reportService: ReportService, private loginService: LoginService, private materialServices:MaterialService, private router: Router) {
+  constructor(private snack: MatSnackBar, private reportService: ReportService, private loginService: LoginService, 
+    private materialServices:MaterialService, private caliberServices:CaliberService, private heightService:HeightsService,
+    private router: Router) {
     this.materialList = [];
+    this.caliberList = [];
+    this.heightList = [];
   }
 
   ngOnInit(): void {
@@ -43,9 +51,21 @@ export class ReportComponent implements OnInit {
       console.log(this.materialList);
     });
 
-    this.user = this.loginService.getUser();
-    this.report.author = this.user.name + ' ' + this.user.lastname;
+    this.caliberServices.getAllCalibers$().subscribe(calibers => {
+      this.caliberList = calibers;
+      console.log(this.caliberList);
+    });
 
+    this.heightService.getAllHeights$().subscribe(height => {
+      this.heightList = height;
+      console.log(this.heightList);
+    });
+
+    if(this.loginService.isLoggedIn()){
+      this.user = this.loginService.getUser();
+      this.report.author = this.user.name + ' ' + this.user.lastname;
+    }
+    
     var today = new Date();
     var date;
     var dd = String(today.getDate()).padStart(2, '0');

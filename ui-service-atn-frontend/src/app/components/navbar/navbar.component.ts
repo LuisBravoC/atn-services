@@ -1,5 +1,5 @@
 import { LoginService } from './../../services/login/login.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -23,7 +23,10 @@ export class NavbarComponent implements OnInit {
         this.user = this.login.getUser();
       }
     )
+
+    //window.addEventListener("beforeunload", () => localStorage.clear());
   }
+
 
   public logout() {
     this.login.logout();

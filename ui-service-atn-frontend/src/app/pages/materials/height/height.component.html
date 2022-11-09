@@ -4,16 +4,16 @@
             <div class="col-md-6 offset-md-3 corners-animated">
                 <div class="margin-inside">
                     <div class="container text-center" style="margin-top : 50px;">
-                        <img src="../../../assets/add-caliber.png" width="100" height="100">
+                        <img src="../../../assets/add-height.png" width="100" height="100">
                     </div>
 
-                    <h1 class="text-center text-primary-color" style="margin-bottom: 40px;">Agregar nuevo calibre</h1>
+                    <h1 class="text-center text-primary-color" style="margin-bottom: 40px;">Agregar nueva altura</h1>
 
                     <form (ngSubmit)="formSubmit(signupForm)" #signupForm="ngForm">
                         <mat-form-field class="full-width" appearance="outline">
-                            <mat-label>Calibre</mat-label>
-                            <input required [(ngModel)]="calibers.caliber" name="name" matInput
-                                placeholder="Escriba el calibre">
+                            <mat-label>Altura</mat-label>
+                            <input required [(ngModel)]="heights.height" name="height" matInput
+                                placeholder="Escriba la altura">
                         </mat-form-field>
 
                         <div class="container text-center" style="margin-top: 20px;">

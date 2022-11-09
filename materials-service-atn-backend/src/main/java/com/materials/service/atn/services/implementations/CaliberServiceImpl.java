@@ -18,7 +18,7 @@ public class CaliberServiceImpl implements CaliberServices {
     }
 
     public Caliber saveCaliber(Caliber caliber) throws Exception {
-        Caliber caliberLocal = this.caliberRepository.findByName(caliber.getName());
+        Caliber caliberLocal = this.caliberRepository.findByCaliber(caliber.getCaliber());
         if (caliberLocal != null) {
             System.out.println("El calibre ya existe");
             throw new Exception("El calibre ya esta presente");
@@ -33,7 +33,7 @@ public class CaliberServiceImpl implements CaliberServices {
     }
 
     public Caliber getCaliber(String name) {
-        return this.caliberRepository.findByName(name);
+        return this.caliberRepository.findByCaliber(name);
     }
 
     public void deleteCaliber(Long caliberId) {

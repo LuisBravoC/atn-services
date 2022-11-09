@@ -1,28 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { CaliberService } from 'src/app/services/materials/caliber/caliber.service';
+import { HeightsService } from 'src/app/services/materials/heights/heights.service';
 
 @Component({
-  selector: 'app-caliber',
-  templateUrl: './caliber.component.html',
-  styleUrls: ['./caliber.component.css']
+  selector: 'app-height',
+  templateUrl: './height.component.html',
+  styleUrls: ['./height.component.css']
 })
-export class CaliberComponent implements OnInit {
+export class HeightComponent implements OnInit {
 
-  public calibers = {
-    caliber: ''
+  public heights = {
+    height: ''
   }
 
-  constructor(private snack: MatSnackBar, private caliberService: CaliberService) { }
+  constructor(private snack: MatSnackBar, private heightService:HeightsService ){ }
 
   ngOnInit(): void {
   }
 
   formSubmit(signupForm: NgForm) {
 
-    console.log(this.calibers);
-    if (this.calibers.caliber == '' || this.calibers.caliber == null) {
+    console.log(this.heights);
+    if (this.heights.height == '' || this.heights.height == null) {
       this.snack.open('El calibre es requerido', '', {
         duration: 3000,
         verticalPosition: 'top',
@@ -32,10 +32,10 @@ export class CaliberComponent implements OnInit {
       return;
     }
 
-    this.caliberService.addCaliber(this.calibers).subscribe(
+    this.heightService.addHeight(this.heights).subscribe(
       (data) => {
         console.log(data);
-        this.snack.open('Calibre guardado exitosamente', '', {
+        this.snack.open('Altura guardado exitosamente', '', {
           duration: 5000,
           verticalPosition: 'bottom',
           horizontalPosition: 'right',

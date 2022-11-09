@@ -4,9 +4,9 @@ import javax.persistence.*;
 
 @Entity
 @Table(
-        name = "calibers"
+        name = "heights"
 )
-public class Caliber {
+public class Height {
 
     @Id
     @GeneratedValue(
@@ -14,11 +14,11 @@ public class Caliber {
     )
     private Long id;
 
-    private String caliber;
+    private String height;
 
     private boolean enabled = true;
 
-    public Caliber() {
+    public Height() {
     }
 
     public Long getId() {
@@ -29,12 +29,12 @@ public class Caliber {
         this.id = id;
     }
 
-    public String getCaliber() {
-        return caliber;
+    public String getHeight() {
+        return height;
     }
 
-    public void setCaliber(String caliber) {
-        this.caliber = caliber;
+    public void setHeight(String height) {
+        this.height = height;
     }
 
     public boolean isEnabled() {

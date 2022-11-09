@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping({"/calibers"})
+@CrossOrigin("*")
 public class CaliberController {
     @Autowired
     private CaliberServices caliberServices;

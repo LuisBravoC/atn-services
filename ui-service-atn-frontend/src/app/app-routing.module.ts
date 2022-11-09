@@ -10,6 +10,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminGuard } from './services/guards/admin.guard';
+import { CaliberComponent } from './pages/materials/caliber/caliber.component';
+import { HeightComponent } from './pages/materials/height/height.component';
 
 const routes: Routes = [
 
@@ -45,6 +47,16 @@ const routes: Routes = [
   }, {
     path: 'materials',
     component: MaterialComponent,
+    pathMatch: 'full',
+    canActivate:[AdminGuard]
+  },{
+    path: 'calibers',
+    component: CaliberComponent,
+    pathMatch: 'full',
+    canActivate:[AdminGuard]
+  },{
+    path: 'heights',
+    component: HeightComponent,
     pathMatch: 'full',
     canActivate:[AdminGuard]
   }, {

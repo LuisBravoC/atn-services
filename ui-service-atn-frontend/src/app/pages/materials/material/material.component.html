@@ -1,7 +1,7 @@
 <div class="bootstrap-wrapper">
-    <div class="container center">
+    <div class="container center-absolute">
         <div class="row" style="margin-top: 20px;">
-            <div class="col-md-6 offset-md-3 corners-animated">
+            <div class="col-md-6 offset-md-3 corners-animated" >
                 <div class="margin-inside">
                     <div class="container text-center" style="margin-top : 50px;">
                         <img src="../../../assets/add-material.png" width="100" height="100">
@@ -9,30 +9,11 @@
 
                     <h1 class="text-center text-primary-color" style="margin-bottom: 40px;">Agregar nuevo material</h1>
 
-
                     <form (ngSubmit)="formSubmit(signupForm)" #signupForm="ngForm">
                         <mat-form-field class="full-width" appearance="outline">
                             <mat-label>Nombre del material</mat-label>
                             <input required [(ngModel)]="material.name" name="name" matInput
                                 placeholder="Escriba el nombre del material">
-                        </mat-form-field>
-
-                        <mat-form-field class="full-width" appearance="outline">
-                            <mat-label>Tamaño</mat-label>
-                            <input required [(ngModel)]="material.size" name="size" matInput
-                                placeholder="Escriba el tamaño">
-                        </mat-form-field>
-
-                        <mat-form-field class="full-width" appearance="outline">
-                            <mat-label>Medida</mat-label>
-                            <input required [(ngModel)]="material.measure" name="measure" matInput
-                                placeholder="Escriba la medida">
-                        </mat-form-field>
-
-                        <mat-form-field class="full-width" appearance="outline">
-                            <mat-label>Cantidad</mat-label>
-                            <input required [(ngModel)]="material.quantity" name="quantity" matInput
-                                placeholder="Escriba la cantidad">
                         </mat-form-field>
 
                         <div class="container text-center" style="margin-top: 20px;">

@@ -14,9 +14,6 @@ public class Material {
     )
     private Long id;
     private String name;
-    private String size;
-    private String measure;
-    private String quantity;
     private boolean enabled = true;
 
     public Material() {
@@ -36,30 +33,6 @@ public class Material {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getSize() {
-        return size;
-    }
-
-    public void setSize(String size) {
-        this.size = size;
-    }
-
-    public String getMeasure() {
-        return measure;
-    }
-
-    public void setMeasure(String measure) {
-        this.measure = measure;
-    }
-
-    public String getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(String quantity) {
-        this.quantity = quantity;
     }
 
     public boolean isEnabled() {

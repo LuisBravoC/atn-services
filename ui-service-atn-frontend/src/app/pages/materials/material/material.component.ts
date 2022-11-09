@@ -1,6 +1,7 @@
-import { MaterialService } from './../../../services/material/material.service';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { MaterialService } from 'src/app/services/materials/material/material.service';
 
 @Component({
   selector: 'app-material',
@@ -10,13 +11,10 @@ import { NgForm } from '@angular/forms';
 export class MaterialComponent implements OnInit {
 
   public material = {
-    name : '',
-    size : '',
-    measure : '',
-    quantity : ''
+    name : ''
   }
 
-  constructor(private materialService:MaterialService) { }
+  constructor(private snack: MatSnackBar, private materialService:MaterialService) { }
 
   ngOnInit(): void {
   }
@@ -25,17 +23,32 @@ export class MaterialComponent implements OnInit {
 
     console.log(this.material);
     if(this.material.name == '' || this.material.name == null){
-      alert('El nombre de usuario es requerido !!');
+      this.snack.open('El material es requerido', '', {
+        duration: 3000,
+        verticalPosition: 'top',
+        horizontalPosition: 'center',
+        panelClass: ['mat-toolbar', 'mat-warn']
+      });
       return;
     }
 
     this.materialService.addMaterial(this.material).subscribe(
       (data) => {
         console.log(data);
-        alert('Usuario guardado exitosamente');
+        this.snack.open('Material guardado exitosamente', '', {
+          duration: 5000,
+          verticalPosition: 'bottom',
+          horizontalPosition: 'right',
+          panelClass: ['mat-toolbar', 'mat-success-snack']
+        });
       },(error) => {
         console.log(error);
-        alert('Ha ocurrido un error en el sistema');
+        this.snack.open('Ha ocurrido un error en el sistema', '', {
+          duration: 3000,
+          verticalPosition: 'top',
+          horizontalPosition: 'center',
+          panelClass: ['mat-toolbar', 'mat-warn']
+        });
       }
     )
 
