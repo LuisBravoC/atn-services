@@ -18,6 +18,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatRippleModule} from '@angular/material/core';
 
 
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -67,7 +68,8 @@ import { RhombusComponent } from './pages/materials/rhombus/rhombus.component';
     MatIconModule,
     MatGridListModule,
     MatSelectModule,
-    MatTabsModule
+    MatTabsModule,
+    MatRippleModule
   ],
   providers: [authInterceptorProvider],
   bootstrap: [AppComponent]

@@ -3,6 +3,7 @@ import { LoginService } from '../../services/login/login.service';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatRipple } from '@angular/material/core';
 
 @Component({
   selector: 'app-login',
@@ -10,6 +11,9 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+
+  hide = true;
+  centered = true;
 
   loginData = {
     "username": '',

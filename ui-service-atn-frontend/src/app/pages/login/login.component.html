@@ -12,7 +12,7 @@
                     <div class="container text-center" style="margin-top : 30px;">
                         <img class="show-mobile" src="../../../assets/atn-logo-min.png">
                     </div>
-                    
+
                     <form (ngSubmit)="formSubmit(loginForm)" #loginForm="ngForm">
                         <mat-form-field class="full-width" appearance="outline" style="margin-top : 30px;">
                             <mat-label>Nombre de usuario</mat-label>
@@ -21,8 +21,14 @@
                         </mat-form-field>
                         <mat-form-field class="full-width" appearance="outline">
                             <mat-label>Contraseña</mat-label>
-                            <input [(ngModel)]="loginData.password" name="password" required type="password" matInput
-                                placeholder="Digite su contraseña">
+                            <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="loginData.password"
+                                name="password" required type="password" matInput placeholder="Digite su contraseña">
+                            <i mat-icon-button matSuffix (click)="hide = !hide"
+                                [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" onmouseover=""
+                                style="cursor: pointer; position: relative;" matRipple
+                                [matRippleCentered]="centered">
+                                <mat-icon>{{hide ? 'visibility':'visibility_off'}}</mat-icon>
+                            </i>
                         </mat-form-field>
 
                         <br><br>

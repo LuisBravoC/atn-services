@@ -1,4 +1,4 @@
-<mat-toolbar class="navbar-color-dark always-top">
+<mat-toolbar class="navbar-color-dark always-top navbar">
     <a [routerLink]="'/'" mat-icon-button class="example-icon" arial-label="Example icon-button with menu icon">
         <img src="../../../assets/atn-logo-small.png" width="100%">
     </a>
@@ -8,7 +8,7 @@
     <span class="example-spacer"></span>
 
 
-    <button *ngIf="isLoggedIn && user" mat-button style="color: #fff;" class="example-icon favorite-icon"
+    <button *ngIf="isLoggedIn && user" mat-button style="color: #fff;" class="example-icon favorite-icon hidden-name-mobile"
         aria-label="Example icon-button with heart icon">
         Hola, {{ user.username }}!
     </button>

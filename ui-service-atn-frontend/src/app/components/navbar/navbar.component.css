@@ -1,9 +1,29 @@
 .example-spacer {
     flex: 1 1 auto;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 831px) {
     .hidden-mobile {
         display: none;
     }
 }
+
+@media (max-width: 401px) {
+    .hidden-name-mobile {
+        display: none;
+    }
+}
+
+.navbar {
+    position:fixed;  
+    z-index:1; /*Add this*/
+    width:100%;
+    /*height:60px;*/
+    text-align:center;
+    vertical-align:middle;
+    line-height:50px;
+    top:0px;
+  }
