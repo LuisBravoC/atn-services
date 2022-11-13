@@ -24,7 +24,7 @@ export class NavbarComponent implements OnInit {
       }
     )
 
-    window.addEventListener("beforeunload", () => localStorage.clear());
+   // window.addEventListener("beforeunload", () => localStorage.clear());
   }
 
 

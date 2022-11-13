@@ -12,6 +12,8 @@ public interface MaterialServices {
 
     Material getMaterial(String name);
 
+    Material updateMaterial(Material material);
+
     void deleteMaterial(Long materialId);
 
 }

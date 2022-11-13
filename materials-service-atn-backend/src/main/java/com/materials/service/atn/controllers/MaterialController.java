@@ -32,6 +32,11 @@ public class MaterialController {
         return this.materialServices.getMaterial(name);
     }
 
+    @PutMapping({"/update"})
+    public Material updateMaterial(@RequestBody Material material) {
+        return this.materialServices.updateMaterial(material);
+    }
+
     @DeleteMapping({"/{materialId}"})
     public void deleteMaterial(@PathVariable("materialId") Long materialId) {
         this.materialServices.deleteMaterial(materialId);

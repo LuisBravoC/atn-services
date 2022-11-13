@@ -1,11 +1,14 @@
 package com.materials.service.atn.entities;
 
+import org.hibernate.annotations.DynamicUpdate;
+
 import javax.persistence.*;
 
 @Entity
 @Table(
         name = "materials"
 )
+@DynamicUpdate
 public class Material {
 
     @Id
@@ -14,6 +17,9 @@ public class Material {
     )
     private Long id;
     private String name;
+
+    private  int Quantity;
+
     private boolean enabled = true;
 
     public Material() {
@@ -33,6 +39,14 @@ public class Material {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getQuantity() {
+        return Quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        Quantity = quantity;
     }
 
     public boolean isEnabled() {

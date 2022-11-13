@@ -18,12 +18,22 @@
 }
 
 .navbar {
-    position:fixed;  
-    z-index:1; /*Add this*/
-    width:100%;
+    position: fixed;
+    z-index: 1;
+    /*Add this*/
+    width: 100%;
     /*height:60px;*/
-    text-align:center;
-    vertical-align:middle;
-    line-height:50px;
-    top:0px;
-  }
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    top: 0px;
+}
+
+.prevent-select {
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+}

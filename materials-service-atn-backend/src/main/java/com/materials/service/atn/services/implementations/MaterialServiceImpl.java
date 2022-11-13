@@ -6,7 +6,6 @@ import com.materials.service.atn.services.MaterialServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Iterator;
 import java.util.List;
 
 @Service
@@ -34,6 +33,15 @@ public class MaterialServiceImpl implements MaterialServices {
 
     public Material getMaterial(String name) {
         return this.materialRepository.findByName(name);
+    }
+
+    public Material updateMaterial(Material material) {
+        Material materialLocal = this.materialRepository.findById(material.getId()).get();
+        if (material.getName() == null){
+            material.setName(materialLocal.getName());
+        }
+        materialLocal = this.materialRepository.save(material);
+        return materialLocal;
     }
 
     public void deleteMaterial(Long materialId) {
