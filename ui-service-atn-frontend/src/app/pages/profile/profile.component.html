@@ -1,0 +1,64 @@
+<div class="bootstrap-wrapper">
+    <div class="container center">
+        <div class="row" style="margin-top: 30px;">
+            <div class="corners-animated" style="max-width: 500px;">
+                <div class="card-header">
+                    <h1 class="text-center">Mi informacion</h1>
+                </div>
+                <div class="margin-inside">
+                    <div class="container text-center" style="margin-top : 50px;">
+                        <img src="../../../assets/add-user.png" width="100" height="100">
+                    </div>
+
+                    <h1 class="text-center text-primary-color" style="margin-bottom: 40px;"></h1>
+
+
+                    <form (ngSubmit)="formSubmit(signupForm)" #signupForm="ngForm">
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Nombre de usuario</mat-label>
+                            <input required [(ngModel)]="user.username" name="username" matInput
+                                placeholder="Escriba el nombre de usuario" disabled>
+                            <mat-hint>El nombre de usuario debe ser único</mat-hint>
+                        </mat-form-field>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Contraseña</mat-label>
+                            <input required [(ngModel)]="user.password" name="password" type="password" matInput
+                                placeholder="Escriba una contraseña">
+                        </mat-form-field>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Nombre</mat-label>
+                            <input required [(ngModel)]="user.name" name="name" matInput
+                                placeholder="Escriba el nombre">
+                        </mat-form-field>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Apellido</mat-label>
+                            <input required [(ngModel)]="user.lastname" name="lastname" matInput
+                                placeholder="Escriba los apellido">
+                        </mat-form-field>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Email</mat-label>
+                            <input required [(ngModel)]="user.email" name="email" type="email" matInput
+                                placeholder="Escriba el email">
+                        </mat-form-field>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Telefono</mat-label>
+                            <input required [(ngModel)]="user.phone" name="phone" matInput
+                                placeholder="Digite el numero de telefono">
+                        </mat-form-field>
+
+                        <div class="container text-center" style="margin-top: 20px;">
+                            <button type="submit" mat-raised-button color="success">Guardar</button>
+                        </div>
+                    </form>
+
+                    <br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

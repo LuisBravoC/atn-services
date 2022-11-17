@@ -13,6 +13,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminGuard } from './services/guards/admin.guard';
 import { CaliberComponent } from './pages/materials/caliber/caliber.component';
 import { HeightComponent } from './pages/materials/height/height.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 const routes: Routes = [
 
@@ -68,6 +69,10 @@ const routes: Routes = [
   }, {
     path: 'report',
     component: ReportComponent,
+    pathMatch: 'full',
+  }, {
+    path: 'profile',
+    component: ProfileComponent,
     pathMatch: 'full',
   },
 

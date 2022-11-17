@@ -35,6 +35,7 @@ import { UnauthorizedComponent } from './pages/unauthorized/unauthorized/unautho
 import { ReportComponent } from './pages/report/report.component';
 import { HeightComponent } from './pages/materials/height/height.component';
 import { RhombusComponent } from './pages/materials/rhombus/rhombus.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { RhombusComponent } from './pages/materials/rhombus/rhombus.component';
     ReportComponent,
     HeightComponent,
     RhombusComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
